@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include "hello.h"
 
  int choice;
     int num1,num2,res;
