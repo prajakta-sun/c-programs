@@ -1,57 +1,66 @@
+//Write a C program that accepts a sentence from the user and counts the
+//occurrences of each vowel (a, e, i, o, u) using a switch case. The program should
+//store the counts in an array and display the results.
+
+
+
 #include<stdio.h>
 #include<string.h>
 
 
     struct charact
     {
+      int i;
        char sentence[30] ;
         int count;
+      
     };
     int main()
 {
 
     char line[150];
-  int vowels, consonant, 
+  int vowels;
+  int consonant;
 
-  // initialize all variables to 0
+ 
   vowels = consonant = 0;
-
-  // get full line of string input
+  
+ 
   printf("Enter a line of string: ");
   fgets(line, sizeof(line), stdin);
 
-  // loop through each character of the string
+int i;
   for (int i = 0; line[i] != '\0'; ++i) 
 
-    // convert character to lowercase
-    line[i] = tolower(line[i]);
+    
+    line[i] = (line[i]);
 
-    // check if the character is a vowel
+    
     if (line[i] == 'a' || line[i] == 'e' || line[i] == 'i' ||
-        line[i] == 'o' || line[i] == 'u') {
+        line[i] == 'o' || line[i] == 'u')
+      {
+          ++vowels;
+      }
 
-      // increment value of vowels by 1
-      ++vowels;
-    }
-
-    // if it is not a vowel and if it is an alphabet, it is a consonant
+   
 
 
     
     
-    else if ((line[i] >= 'a' && line[i] <= 'z')) {
+    else if ((line[i] >= 'a' && line[i] <= 'z')) 
+    {
       ++consonant;
     }
 
-    // check if the character is a digit
+    
     else if (line[i] >= '0' && line[i] <= '9') 
      
-    // check if the character is an empty space
-    elseif (line[i] == ' ') 
-    
+    {
           printf("\nVowels: %d", vowels);
           printf("\nConsonants: %d", consonant);
-    
+          scanf ("%d",vowels);
+          scanf("%d",consonant);
+    }
   
   return 0;
 }

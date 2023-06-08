@@ -1,4 +1,10 @@
-#include <stdio.h>
+//  Write a C program that simulates a basic student management system. Use a
+// switch case to handle options such as adding a student, displaying student
+// information, searching for a student by name or ID, updating student information,
+// and deleting a student. Implement these operations using arrays and structures.
+ 
+ 
+ #include <stdio.h>
 #include<string.h>
 struct student  {
     char Name[50];
@@ -55,8 +61,12 @@ int main()
                 }
             }
              break;
-        // case 4:                  //(delete a student record)
+         case 4://(delete a student record)
         }
-    }
+         printf(" \n remove student");
+         scanf(" \n %d",&n);
+                         
+        }
+    
     return 0;
 }
